@@ -9,7 +9,6 @@ class Playlist extends React.Component {
 		super(props);
 		this.state = {
 				inputValue: '',
-				alert: '',
 				errMessageEmpty: '',
 	      errMessageNotSet: ''
 	    };
@@ -72,8 +71,7 @@ class Playlist extends React.Component {
 		if (name && list) {
 			this.props.onSave();
 			this.setState({
-				inputValue: '',
-				alert: alert(`Congra! your playlist '${this.props.playlistName}' is saved`)
+				inputValue: ''
 				});
 		}
 	}

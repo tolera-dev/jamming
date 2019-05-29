@@ -91,6 +91,7 @@ const Spotify = {
 			  const jsonResponse = await response.json();
 			  return jsonResponse.id;
 			  }
+				throw new Error('Request failed!');
 	 } catch (error) {
 			console.log(error);
 		}
@@ -125,6 +126,7 @@ const Spotify = {
 					const jsonResponse = await response.json();
 					return jsonResponse;
 				  }
+				  throw new Error('Request failed!');
 				} catch (error) {
 				console.log(error);
 				}
