@@ -1,0 +1,46 @@
+.SearchBar {
+    display: block;
+    background: url('musicBackground.jpg') 90% 30%;
+    padding-top: 6.94rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  .SearchBar input {
+    width: 287px;
+    padding: .5rem 0;;
+    border: 3px solid rgba(59, 8, 177, 0.692);
+    margin-bottom: 2.22rem;
+    margin-right: 0.5rem;
+    color: #010c3f;
+    text-align: center;
+    font-size: 1rem;
+  }
+  
+  .SearchBar input:focus {
+    outline: none;
+  }
+  
+  .SearchButton {
+    border: 0;
+    width: 7%;
+    line-height: 2.1;
+    padding: auto;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 0.5rem;
+    background-color:  rgba(59, 8, 177, 0.692);
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+                inset -2px -2px 3px rgba(0, 0, 0, .6);
+}
+
+.SearchButton:hover {
+    background-color:rgba(8, 76, 177, 0.692);
+}
+
+.SearchButton:active {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+                inset 2px 2px 3px rgba(0, 0, 0, .6);
+}
