@@ -38,6 +38,7 @@ class Track extends React.Component {
     }
   }
 
+
   render(){    
       return (
         <div className="Track">
@@ -49,7 +50,6 @@ class Track extends React.Component {
             <p> by <span style = {{fontWeight:'bold'}}>{this.props.track.artist}</span> | {this.props.track.album}</p>
             <p style={{fontSize: '0.8rem'}}>popularity: {this.props.track.popularity}  |   
             <span> Time {Math.floor(this.props.track.duration/60000)}:{this.changeMsToSecond()}</span></p>
-            
           </div>
             {this.renderAction()} 
         </div>

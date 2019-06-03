@@ -90,8 +90,8 @@ const Spotify = {
 				if(response.ok){
 			  const jsonResponse = await response.json();
 			  return jsonResponse.id;
-			  }
-				throw new Error('Request failed!');
+				}
+				throw new Error('Request failed!');	
 	 } catch (error) {
 			console.log(error);
 		}
@@ -102,9 +102,8 @@ const Spotify = {
 
 		if (!playlistName || uriArray.length === 0) {
 			return;
-		}
-
-		accessToken = this.getAccessToken();
+		} else {
+            accessToken = this.getAccessToken();
 		const headers = { 'Authorization': `Bearer ${accessToken}` } ;
 
 		//get current user's id
@@ -132,6 +131,7 @@ const Spotify = {
 				}
 			})
 		});
+	  }
 	}
 };
 

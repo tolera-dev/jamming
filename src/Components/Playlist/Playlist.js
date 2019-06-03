@@ -28,10 +28,10 @@ class Playlist extends React.Component {
 	//clear input on enter
 
 	handleKeyPress(e) {
+	 
 		if(e.key === 'Enter'){
-			e.target.value = '';
-			this.checkNameIsSet();
-	    }
+			this.props.onSave(this.state.searchTerm);
+	    } 
 	}
 
 	checkListEmpty() {
@@ -95,6 +95,13 @@ class Playlist extends React.Component {
 		}
 	}
 
+	// disabled(){
+	// 	if (this.props.tracks.length === 0){
+	// 		return <button type="button" disabled className="Playlist-save disabled" onClick={this.handleClick} style = {{marginBottom: ''}}>Save to Spotify</button>
+	// 	} else{
+	// 		return <button className="Playlist-save" onClick={this.handleClick} style = {{marginBottom: ''}}>Save to Spotify</button>
+	// 	}
+	// }
 
 	render() {
 		return (
@@ -104,7 +111,9 @@ class Playlist extends React.Component {
 							onChange={this.handleNameChange}
 							onKeyPress={this.handleKeyPress}
 							value={this.state.inputValue}/>
+						{/* {this.disabled()} */}
 						<a className="Playlist-save" onClick={this.handleClick} style = {{marginBottom: ''}}>Save to Spotify</a>	
+						<a className="Playlist-save-mobile" onClick={this.handleClick} style = {{marginBottom: ''}}>Save</a>	
 				</div>
 				<div className =' plist'>
 				{this.props.playlistName}

@@ -7,23 +7,23 @@
   }
   
   .SearchBar input {
-    width: 287px;
+    width: 15rem;
     padding: .5rem 0;;
     border: 3px solid rgba(59, 8, 177, 0.692);
     margin-bottom: 2.22rem;
-    margin-right: 0.5rem;
+    margin-right: 0;
     color: #010c3f;
     text-align: center;
     font-size: 1rem;
   }
   
   .SearchBar input:focus {
-    outline: none;
+    outline:none;
   }
   
   .SearchButton {
     border: 0;
-    width: 7%;
+    width: 4rem;
     line-height: 2.1;
     padding: auto;
     font-size: 1rem;
